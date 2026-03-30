@@ -111,7 +111,10 @@ app.delete('/deleteData/:id', async (req, res) => {
         res.status(500).send(error);
     }
 })
-
+app.get('/',(req,res)=>{
+    res.send('Heart Beat Test')
+}
+       )
 //Mongo Connection
 mongoose.connect(config.mongoose.url)
     .then(() => console.log('Connected to MongoDB'))
